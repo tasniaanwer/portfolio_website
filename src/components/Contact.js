@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -22,18 +23,39 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      // EmailJS service details
+      const serviceId = 'service_1kv2iup';
+      const templateId = 'template_ox6qwq5';
+      const publicKey = 'FzE4sZ5ReLP7Qq822';
 
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message
+        },
+        publicKey
+      );
+
+      console.log('Email sent successfully:', result.text);
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+
+      // Clear success message after 5 seconds
+      setTimeout(() => setSubmitStatus(null), 5000);
+
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      setSubmitStatus('error');
+
+      // Clear error message after 5 seconds
+      setTimeout(() => setSubmitStatus(null), 5000);
+    }
 
     setIsSubmitting(false);
-    setSubmitStatus('success');
-    setFormData({ name: '', email: '', message: '' });
-
-    // Clear success message after 5 seconds
-    setTimeout(() => setSubmitStatus(null), 5000);
   };
 
   return (
@@ -53,21 +75,27 @@ const Contact = () => {
                 <span className="contact-icon">📧</span>
                 <div>
                   <h4>Email</h4>
-                  <p>hello@yourname.dev</p>
+                  <a href="mailto:tasniaanwer@gmail.com" className="contact-link">
+                    tasniaanwer@gmail.com
+                  </a>
                 </div>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">💼</span>
                 <div>
                   <h4>LinkedIn</h4>
-                  <p>linkedin.com/in/yourname</p>
+                  <a href="https://linkedin.com/in/tasnia-anower-medha" target="_blank" rel="noopener noreferrer" className="contact-link">
+                    linkedin.com/in/tasnia-anower-medha
+                  </a>
                 </div>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">🐙</span>
                 <div>
                   <h4>GitHub</h4>
-                  <p>github.com/yourname</p>
+                  <a href="https://github.com/tasniaanwer" target="_blank" rel="noopener noreferrer" className="contact-link">
+                    github.com/tasniaanwer
+                  </a>
                 </div>
               </div>
             </div>
@@ -108,7 +136,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="btn"
+              className="btn btn-black"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -116,6 +144,11 @@ const Contact = () => {
             {submitStatus === 'success' && (
               <div className="success-message">
                 ✅ Thank you for your message! I'll get back to you soon.
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="error-message">
+                ❌ Sorry, something went wrong. Please try again later.
               </div>
             )}
           </form>

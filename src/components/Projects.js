@@ -27,7 +27,7 @@ const Projects = () => {
       title: "DaktarShab: Telemedicine Platform",
       description: "Privacy-focused telemedicine app with secure video consultations via WebRTC. Integrated appointment scheduling using Prisma ORM and NeonDB",
       technologies: ["Next.js", "Prisma", "NeonDB", "WebRTC","Tailwind"],
-      image: "https://via.placeholder.com/400x200/4299e1/ffffff?text=Weather+Dashboard",
+      image: "/images/Gemini_Generated_Image_duk68fduk68fduk6.png",
       githubLink: "https://github.com/tauhid-taaha/DaktarShab"
     },
       

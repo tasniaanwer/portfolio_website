@@ -30,16 +30,16 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Connect</h4>
             <div className="social-links">
-              <a href="#" className="social-link" aria-label="GitHub">
+              <a href="https://github.com/tasniaanwer" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="GitHub">
                 <span>🐙</span> GitHub
               </a>
-              <a href="#" className="social-link" aria-label="LinkedIn">
+              <a href="www.linkedin.com/in/tasnia-medha-707891390" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
                 <span>💼</span> LinkedIn
               </a>
-              <a href="#" className="social-link" aria-label="Twitter">
-                <span>🐦</span> Twitter
+              <a href="https://x.com/TAnower27959" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="X">
+                <span>✖️</span> X
               </a>
-              <a href="#" className="social-link" aria-label="Email">
+              <a href="mailto:tasniaanwer@gmail.com" className="social-link" aria-label="Email">
                 <span>📧</span> Email
               </a>
             </div>
@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Your Name. All rights reserved.</p>
+          <p>&copy; {currentYear} MedKad. All rights reserved.</p>
           <p>Built with React and lots of ☕</p>
         </div>
       </div>

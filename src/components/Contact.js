@@ -24,10 +24,10 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      // EmailJS service details
-      const serviceId = 'service_1kv2iup';
-      const templateId = 'template_ox6qwq5';
-      const publicKey = 'FzE4sZ5ReLP7Qq822';
+      // EmailJS service details from environment variables
+      const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
       const result = await emailjs.send(
         serviceId,
@@ -84,8 +84,8 @@ const Contact = () => {
                 <span className="contact-icon">💼</span>
                 <div>
                   <h4>LinkedIn</h4>
-                  <a href="https://linkedin.com/in/tasnia-anower-medha" target="_blank" rel="noopener noreferrer" className="contact-link">
-                    linkedin.com/in/tasnia-anower-medha
+                  <a href="https://www.linkedin.com/in/tasnia-medha-707891390" target="_blank" rel="noopener noreferrer" className="contact-link">
+                    linkedin.com/in/tasnia-medha-707891390
                   </a>
                 </div>
               </div>

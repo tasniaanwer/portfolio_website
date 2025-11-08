@@ -38,7 +38,7 @@ const Hero = () => {
         <div className="hero-image">
           <div className="hero-avatar">
             <img
-              src="/images/profile image.jpg"
+              src="/images/profile-image.jpg"
               alt="Tasnia Anower Medha - Professional Headshot"
               className="avatar-img"
             />

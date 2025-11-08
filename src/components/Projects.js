@@ -40,6 +40,14 @@ const Projects = () => {
       liveLink: "https://docschedule.vercel.app/"
     },
     {
+      title: " Portfolio Website",
+      description:     "A modern and responsive personal portfolio website built to showcase my projects, skills, and achievements. It features smooth navigation, interactive animations, and a contact form integrated with EmailJS for direct communication. Designed with a focus on clean UI, accessibility, and performance to create a strong personal brand identity online.",
+      technologies:["JavaScript", "CSS", "html", "API"],
+      image: "/images/Screenshot 2025-11-03 135709.png",
+      githubLink: "https://github.com/tasniaanwer/portfolio_website.git",
+      liveLink: "https://docschedule.vercel.app/"
+    },
+    {
       title: "E-Commerce App",
       description: "Acomprehensive buy-and-sell platform with product catalog management, secure payment processing, and user reviews",
       technologies: ["MERN", "Node.js", "MongoDB", "Express.js"],

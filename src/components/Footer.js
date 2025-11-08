@@ -11,8 +11,7 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Portfolio</h3>
             <p>
-              Building amazing web experiences with modern technologies and 
-              creative solutions.
+              A digital platform where individuals showcase their professional work, skills, and achievements to potential employers or clients
             </p>
           </div>
           
@@ -33,11 +32,8 @@ const Footer = () => {
               <a href="https://github.com/tasniaanwer" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="GitHub">
                 <span>🐙</span> GitHub
               </a>
-              <a href="www.linkedin.com/in/tasnia-medha-707891390" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/tasnia-anwer-172a28283" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
                 <span>💼</span> LinkedIn
-              </a>
-              <a href="https://x.com/TAnower27959" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="X">
-                <span>✖️</span> X
               </a>
               <a href="mailto:tasniaanwer@gmail.com" className="social-link" aria-label="Email">
                 <span>📧</span> Email

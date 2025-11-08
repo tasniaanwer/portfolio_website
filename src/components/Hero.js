@@ -10,12 +10,22 @@ const Hero = () => {
             Hi, I'm <span className="highlight">Tasnia Anower Medha</span>
           </h1>
           <h2 className="hero-subtitle">Full Stack Developer</h2>
+          <div className="hero-badges">
+            <div className="internship-badge">
+              <span className="company-name">Battery Low Interactive</span>
+              <span className="internship-role">Web Developer Intern</span>
+            </div>
+            <div className="education-badge">
+              <span className="university-name">Islamic University of Technology</span>
+              <span className="education-info">B.Sc Software Engineering </span>
+            </div>
+          </div>
           <p className="hero-description">
-            I’m a Software Engineering student passionate about blockchain, 
-            software architecture, and user-centered product design. 
+            I'm a Software Engineering student passionate about blockchain,
+            software architecture, and user-centered product design.
             I love building impactful web and decentralized applications that merge
              innovation with real-world purpose.
-             
+
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-black btn-hero">View My Work</a>
@@ -28,7 +38,7 @@ const Hero = () => {
         <div className="hero-image">
           <div className="hero-avatar">
             <img
-              src="/profile-image.jpg"
+              src="/images/profile image.jpg"
               alt="Tasnia Anower Medha - Professional Headshot"
               className="avatar-img"
             />

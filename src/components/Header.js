@@ -22,6 +22,7 @@ const Header = () => {
           <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
           <a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a>
           <a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a>
+          <a href="#achievements" onClick={() => setIsMenuOpen(false)}>Achievements</a>
           <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
           <button
             className="theme-toggle"

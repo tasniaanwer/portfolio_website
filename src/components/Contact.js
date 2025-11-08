@@ -74,7 +74,7 @@ const Contact = () => {
               <div className="contact-item">
                 <span className="contact-icon">📧</span>
                 <div>
-                  <h4>Email</h4>
+                  
                   <a href="mailto:tasniaanwer@gmail.com" className="contact-link">
                     tasniaanwer@gmail.com
                   </a>
@@ -83,16 +83,16 @@ const Contact = () => {
               <div className="contact-item">
                 <span className="contact-icon">💼</span>
                 <div>
-                  <h4>LinkedIn</h4>
-                  <a href="https://www.linkedin.com/in/tasnia-medha-707891390" target="_blank" rel="noopener noreferrer" className="contact-link">
-                    linkedin.com/in/tasnia-medha-707891390
+                  
+                  <a href="https://www.linkedin.com/in/tasnia-anwer-172a28283" target="_blank" rel="noopener noreferrer" className="contact-link">
+                    LinkedIn
                   </a>
                 </div>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">🐙</span>
                 <div>
-                  <h4>GitHub</h4>
+                  
                   <a href="https://github.com/tasniaanwer" target="_blank" rel="noopener noreferrer" className="contact-link">
                     github.com/tasniaanwer
                   </a>

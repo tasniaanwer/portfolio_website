@@ -4,30 +4,40 @@ import './Skills.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Core Technologies",
       skills: [
+        { name: "JavaScript", level: 95 },
         { name: "React", level: 90 },
-        { name: "JavaScript", level: 85 },
-        { name: "HTML/CSS", level: 95 },
-        { name: "TypeScript", level: 75 }
+        { name: "Node.js", level: 85 },
+        { name: "Python", level: 80 },
+        { name: "HTML/CSS", level: 90 }
       ]
     },
     {
-      title: "Backend",
+      title: "Backend & Databases",
       skills: [
-        { name: "Node.js", level: 80 },
-        { name: "Python", level: 75 },
+        { name: "MongoDB", level: 85 },
         { name: "Express.js", level: 85 },
-        { name: "MongoDB", level: 70 }
+        { name: "PostgreSQL", level: 75 },
+        { name: "Neon", level: 80 }
       ]
     },
     {
-      title: "Tools & Others",
+      title: "Blockchain & Web3",
       skills: [
-        { name: "Git", level: 90 },
-        { name: "Docker", level: 65 },
-        { name: "AWS", level: 60 },
-        { name: "Figma", level: 80 }
+        { name: "Smart Contract Development", level: 75 },
+        { name: "Blockchain Transactions", level: 70 },
+        { name: "DApp Management", level: 65 },
+        { name: "Web3.js", level: 70 }
+      ]
+    },
+    {
+      title: "Cloud & Tools",
+      skills: [
+        { name: "AWS", level: 75 },
+        { name: "Vercel", level: 85 },
+        { name: "GitHub", level: 95 },
+        { name: "Postman", level: 85 }
       ]
     }
   ];

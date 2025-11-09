@@ -3,11 +3,37 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scroll-based header states */
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.95);
   border-bottom: 1px solid rgba(255, 215, 0, 0.3);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.4),
+    0 1px 0 0 rgba(255, 215, 0, 0.1);
+}
+
+/* Progress indicator */
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700, #ffed4e, #ffd700);
+  width: var(--scroll-progress, 0%);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
 .header .container {
@@ -59,6 +85,93 @@
 
 .nav a:hover::after {
   width: 100%;
+}
+
+/* Active section indicator */
+.nav a.active {
+  color: #ffd700;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+.nav a.active::after {
+  width: 100%;
+  background: linear-gradient(90deg, #ffd700, #ffed4e);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+/* Enhanced navigation dots */
+.nav-dots {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 215, 0, 0.5);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.nav-dot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  background: #ffd700;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-dot:hover {
+  border-color: rgba(255, 215, 0, 0.8);
+  transform: scale(1.2);
+}
+
+.nav-dot.active {
+  border-color: #ffd700;
+  background: #ffd700;
+  transform: scale(1.3);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+.nav-dot.active::before {
+  opacity: 1;
+}
+
+.nav-dot .tooltip {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.nav-dot:hover .tooltip {
+  opacity: 1;
+  right: 2.5rem;
 }
 
 .theme-toggle {
@@ -138,5 +251,10 @@
   .theme-toggle {
     margin: 0.5rem 0;
     align-self: flex-start;
+  }
+
+  /* Hide navigation dots on mobile */
+  .nav-dots {
+    display: none;
   }
 }

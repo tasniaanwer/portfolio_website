@@ -6,9 +6,12 @@ const Hero = () => {
     <section id="home" className="hero">
       <div className="container">
         <div className="hero-content">
-          <h1 className="hero-title">
-            Hi, I'm <span className="highlight">Tasnia Anower Medha</span>
-          </h1>
+          <div className="hero-greeting">
+          Hi, I am
+        </div>
+        <h1 className="hero-title">
+          <span className="highlight">Tasnia Anower Medha</span>
+        </h1>
           <h2 className="hero-subtitle">Full Stack Developer</h2>
           <div className="hero-badges">
             <div className="internship-badge">
@@ -28,13 +31,11 @@ const Hero = () => {
 
           </p>
           <div className="hero-buttons">
-            <a href="#projects" className="btn btn-black btn-hero">View My Work</a>
-            <a href="#contact" className="btn btn-black-outline btn-hero">Get In Touch</a>
             <a href="/resume.pdf" className="btn btn-gold btn-hero" download="Tasnia_Anower_Medha_Resume.pdf">
               Download Resume
             </a>
           </div>
-        </div>
+          </div>
         <div className="hero-image">
           <div className="hero-avatar">
             <img

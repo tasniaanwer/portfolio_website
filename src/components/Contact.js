@@ -89,16 +89,7 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-              <div className="contact-item">
-                <span className="contact-icon">💬</span>
-                <div>
-
-                  <a href="https://wa.me/8801712888233" target="_blank" rel="noopener noreferrer" className="contact-link">
-                    WhatsApp
-                  </a>
-                </div>
-              </div>
-             
+                           
               <div className="contact-item">
                 <span className="contact-icon">🐙</span>
                 <div>

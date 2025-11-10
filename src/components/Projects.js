@@ -43,7 +43,7 @@ const Projects = () => {
       title: " Portfolio Website",
       description:     "A modern and responsive personal portfolio website built to showcase my projects, skills, and achievements. It features smooth navigation, interactive animations, and a contact form integrated with EmailJS for direct communication. Designed with a focus on clean UI, accessibility, and performance to create a strong personal brand identity online.",
       technologies:["JavaScript", "CSS", "html", "API"],
-      image: "/images/Screenshot 2025-11-03 135709.png",
+      image: "/images/Screenshot 2025-11-10 173406.png",
       githubLink: "https://github.com/tasniaanwer/portfolio_website.git",
       liveLink: "https://docschedule.vercel.app/"
     },
